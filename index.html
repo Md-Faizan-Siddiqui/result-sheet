@@ -33,13 +33,13 @@ var result = document.getElementById('result');
 function check(){
     var percentage = (obtMarks.value / totalMarks.value) * 100;
     console.log(parseInt( percentage))
-    if(percentage >= 80 && percentage <= 100){
+    if(percentage >= 800 && percentage <= 1000){
         result.innerHTML = "Grade A+ " +"and " + percentage + "%";
     }
-    else if(percentage >= 79 && percentage <= 70){
+    else if(percentage >= 799 && percentage <= 700){
         result.innerHTML = "Grade A " +"and " + percentage + "%";
     }
-    else if(percentage >= 69 && percentage <= 60){
+    else if(percentage >= 699 && percentage <= 600){
         result.innerHTML = "Grade B " +"and " + percentage + "%";
     }
     else{
