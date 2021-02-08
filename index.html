@@ -1,53 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
     <div class="container">
         <h1>Result</h1>
-    <form action="#" onsubmit="check()">
-        <input type="number" id="tm" placeholder="Enter Total Marks" required>
-        <input type="number" id="om" placeholder="Enter Obtained Marks" required  >
-        <button type="submit">Check Result</button>
-    </form>
-    <div class="res">
-        <h1>Your Result</h1>
-        <h1 id="result"></h1>
-    </div>
-
-    
-    
-    
-    
-    <script>
-          
-var totalMarks = document.getElementById('tm');
-var obtMarks = document.getElementById('om');
-var result = document.getElementById('result');
-
-function check(){
-    var percentage = (obtMarks.value / totalMarks.value) * 100;
-    console.log(parseInt( percentage))
-    if(percentage >= 800 && percentage <= 1000){
-        result.innerHTML = "Grade A+ " +"and " + percentage + "%";
-    }
-    else if(percentage >= 799 && percentage <= 700){
-        result.innerHTML = "Grade A " +"and " + percentage + "%";
-    }
-    else if(percentage >= 699 && percentage <= 600){
-        result.innerHTML = "Grade B " +"and " + percentage + "%";
-    }
-    else{
-        result.innerHTML = "Fail";
-    }
-}
+        <form action="#" onsubmit="return check()">
+            <input type="number" id="tm" placeholder="Enter Total Marks" required>
+            <input type="number" id="om" placeholder="Enter Obtained Marks" required>
+            <button type="submit">Check Result</button>
+        </form>
+        <div class="res">
+            <h1>Your Result</h1>
+            <h1 id="result"></h1>
+        </div>
 
 
-    </script>
+
+
+
+        <script>
+
+            var totalMarks = document.getElementById('tm');
+            var obtMarks = document.getElementById('om');
+            var result = document.getElementById('result');
+
+            function check() {
+                var percentage = (obtMarks.value / totalMarks.value) * 100;
+                console.log(parseInt(percentage))
+                if (percentage >= 80 && percentage <= 100) {
+                    result.innerHTML = "Grade A+ " + "and " + percentage + "%";
+                }
+                else if (percentage >= 70 && percentage <= 79) {
+                    result.innerHTML = "Grade A " + "and " + percentage + "%";
+                }
+                else if (percentage >= 60 && percentage <= 69) {
+                    result.innerHTML = "Grade B " + "and " + percentage + "%";
+                }
+                else {
+                    result.innerHTML = "Fail";
+                }
+                return false
+            }
+
+
+        </script>
 </body>
+
 </html>
